@@ -16,11 +16,9 @@ export class App extends Component {
     filter: '',
   };
 
-  id = nanoid();
-
   addContact = ({ name, number }) => {
     const contact = {
-      id: this.id,
+      id: nanoid(),
       name,
       number,
     };
