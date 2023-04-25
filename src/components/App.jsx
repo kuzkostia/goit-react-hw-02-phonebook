@@ -51,13 +51,8 @@ export class App extends Component {
   };
 
   delContact = id => {
-    // отримання поточного списку контактів зі стану компонента
     const { contacts } = this.state;
-
-    // Новий масив, який містить всі контакти, окрім того, що має ідентифікатор
     const filtred = contacts.filter(item => item.id !== id);
-
-    // оновлення властивості contacts
     this.setState({ contacts: filtred });
   };
 
